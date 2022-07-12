@@ -12,14 +12,12 @@ jobs:
             - checkout
             - node/install-packages
             - run:
-                name: Build "test"
-                command: npm run build:test
+                  name: Build "test"
+                  command: npm run build:test
             - store_arifacts:
-                path: /app/build/test.js
-
+                  path: /app/build/test.js
 
 workflows:
     build:
         jobs:
-            - node/run
-                npm-run: build:test
+            - setup-and-build
