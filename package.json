@@ -1,0 +1,23 @@
+{
+    "name": "circleci-test",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "src/test.ts",
+    "scripts": {
+        "build:test": "esbuild ./src/test.ts --minify --bundle --outdir=./build --platform=node --target=node16 --format=esm --external:./node_modules/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Woife5/circleci-test.git"
+    },
+    "author": "Wolfgang Schwendtbauer",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Woife5/circleci-test/issues"
+    },
+    "homepage": "https://github.com/Woife5/circleci-test#readme",
+    "devDependencies": {
+        "esbuild": "^0.14.49"
+    }
+}
