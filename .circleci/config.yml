@@ -1,0 +1,25 @@
+version: 2.1
+
+orbs:
+    node: circleci/node@5.0.2
+
+jobs:
+    setup-and-build:
+        docker:
+            image: orbs/node:lts
+        working_directory: /app
+        steps:
+            - checkout
+            - node/install-packages
+            - run:
+                name: Build "test"
+                command: npm run build:test
+            - store_arifacts:
+                path: /app/build/test.js
+
+
+workflows:
+    build:
+        jobs:
+            - node/run
+                npm-run: build:test
