@@ -14,7 +14,7 @@ jobs:
             - run:
                   name: Build "test"
                   command: npm run build:test
-            - store_arifacts:
+            - store_artifacts:
                   path: /app/build/test.js
 
 workflows:
