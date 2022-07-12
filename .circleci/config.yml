@@ -6,7 +6,7 @@ orbs:
 jobs:
     setup-and-build:
         docker:
-            - image: orbs/node:lts
+            - image: node:lts
         working_directory: /app
         steps:
             - checkout
